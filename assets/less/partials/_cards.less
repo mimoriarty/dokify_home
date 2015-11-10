@@ -3,11 +3,13 @@
   height: 206px;
   padding-left: 0;
   text-align: center;
-  .card-1 {
+  .card {
     border: 1px solid @color4;
     display: inline-block;
     height: 100%;
     position: relative;
+  }
+  .card-1 {
     width: 31%;
     &:first-child {
       margin-right: 3.5%;
@@ -15,41 +17,62 @@
     &:last-child {
       margin-left: 3.5%;
     }
-    .card-header {
-      border-bottom: 1px solid @color4;
-      padding: 13px 16px;
-      position: relative;
-      text-align: left;
-      span[class$="-icon"] {
-        position: absolute;
-        right: 0;
-        top: 8px;
-      }
-    }
-    .card-content {
-      padding-top: 20px;
-    }
-    .card-footer {
-      bottom: 0;
-      padding: 16px;
-      position: absolute;
-      width: 100%;
-      .bullet {
+  }
+  .card-3 {
+    width: 100%;
+    .client-list {
+      list-style-type: none;
+      padding-left: 0;
+      li {
         display: inline-block;
-        margin-left: 6px;
-        position: relative;
-        top: 1px;
-        .icon('../images/bullet.png', 12px, 12px);
-        &.success {
-          background-image: url('../images/bullet-success.png');
-        }
-        &.cancel {
-          background-image: url('../images/bullet-cancel.png');
-        }
-        &.expanded {
-          margin-left: 12px;
-        }
+        width: 25%;
+      }
+      .card-footer {
+        width: 25%;
       }
     }
+  }
+  .card-header {
+    border-bottom: 1px solid @color4;
+    padding: 13px 16px;
+    position: relative;
+    text-align: left;
+    span[class$="-icon"] {
+      position: absolute;
+      right: 0;
+      top: 8px;
+    }
+  }
+  .card-content {
+    padding-top: 20px;
+  }
+  .card-footer {
+    bottom: 0;
+    padding: 16px;
+    position: absolute;
+    width: 100%;
+    .bullet {
+      display: inline-block;
+      margin-left: 6px;
+      position: relative;
+      top: 1px;
+      .icon('../images/bullet.png', 12px, 12px);
+      &.success {
+        background-image: url('../images/bullet-success.png');
+      }
+      &.cancel {
+        background-image: url('../images/bullet-cancel.png');
+      }
+      &.expanded {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+.line {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
   }
 }

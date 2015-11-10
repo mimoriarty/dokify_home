@@ -101,11 +101,13 @@
   padding-left: 0;
   text-align: center;
 }
-.cards .card-1 {
+.cards .card {
   border: 1px solid #e0e0e0;
   display: inline-block;
   height: 100%;
   position: relative;
+}
+.cards .card-1 {
   width: 31%;
 }
 .cards .card-1:first-child {
@@ -114,27 +116,41 @@
 .cards .card-1:last-child {
   margin-left: 3.5%;
 }
-.cards .card-1 .card-header {
+.cards .card-3 {
+  width: 100%;
+}
+.cards .card-3 .client-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.cards .card-3 .client-list li {
+  display: inline-block;
+  width: 25%;
+}
+.cards .card-3 .client-list .card-footer {
+  width: 25%;
+}
+.cards .card-header {
   border-bottom: 1px solid #e0e0e0;
   padding: 13px 16px;
   position: relative;
   text-align: left;
 }
-.cards .card-1 .card-header span[class$="-icon"] {
+.cards .card-header span[class$="-icon"] {
   position: absolute;
   right: 0;
   top: 8px;
 }
-.cards .card-1 .card-content {
+.cards .card-content {
   padding-top: 20px;
 }
-.cards .card-1 .card-footer {
+.cards .card-footer {
   bottom: 0;
   padding: 16px;
   position: absolute;
   width: 100%;
 }
-.cards .card-1 .card-footer .bullet {
+.cards .card-footer .bullet {
   display: inline-block;
   margin-left: 6px;
   position: relative;
@@ -144,14 +160,20 @@
   margin-right: 12px;
   width: 12px;
 }
-.cards .card-1 .card-footer .bullet.success {
+.cards .card-footer .bullet.success {
   background-image: url('../images/bullet-success.png');
 }
-.cards .card-1 .card-footer .bullet.cancel {
+.cards .card-footer .bullet.cancel {
   background-image: url('../images/bullet-cancel.png');
 }
-.cards .card-1 .card-footer .bullet.expanded {
+.cards .card-footer .bullet.expanded {
   margin-left: 12px;
+}
+.line {
+  margin-bottom: 20px;
+}
+.line:last-child {
+  margin-bottom: 0;
 }
 .navbar {
   height: 100%;
