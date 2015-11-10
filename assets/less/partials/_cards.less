@@ -7,6 +7,7 @@
     border: 1px solid @color4;
     display: inline-block;
     height: 100%;
+    position: relative;
     width: 31%;
     &:first-child {
       margin-right: 3.5%;
@@ -23,6 +24,31 @@
         position: absolute;
         right: 0;
         top: 8px;
+      }
+    }
+    .card-content {
+      padding-top: 20px;
+    }
+    .card-footer {
+      bottom: 0;
+      padding: 16px;
+      position: absolute;
+      width: 100%;
+      .bullet {
+        display: inline-block;
+        margin-left: 6px;
+        position: relative;
+        top: 1px;
+        .icon('../images/bullet.png', 12px, 12px);
+        &.success {
+          background-image: url('../images/bullet-success.png');
+        }
+        &.cancel {
+          background-image: url('../images/bullet-cancel.png');
+        }
+        &.expanded {
+          margin-left: 12px;
+        }
       }
     }
   }

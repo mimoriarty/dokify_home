@@ -105,6 +105,7 @@
   border: 1px solid #e0e0e0;
   display: inline-block;
   height: 100%;
+  position: relative;
   width: 31%;
 }
 .cards .card-1:first-child {
@@ -123,6 +124,34 @@
   position: absolute;
   right: 0;
   top: 8px;
+}
+.cards .card-1 .card-content {
+  padding-top: 20px;
+}
+.cards .card-1 .card-footer {
+  bottom: 0;
+  padding: 16px;
+  position: absolute;
+  width: 100%;
+}
+.cards .card-1 .card-footer .bullet {
+  display: inline-block;
+  margin-left: 6px;
+  position: relative;
+  top: 1px;
+  background: url('../images/bullet.png') no-repeat;
+  height: 12px;
+  margin-right: 12px;
+  width: 12px;
+}
+.cards .card-1 .card-footer .bullet.success {
+  background-image: url('../images/bullet-success.png');
+}
+.cards .card-1 .card-footer .bullet.cancel {
+  background-image: url('../images/bullet-cancel.png');
+}
+.cards .card-1 .card-footer .bullet.expanded {
+  margin-left: 12px;
 }
 .navbar {
   height: 100%;
