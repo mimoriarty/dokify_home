@@ -130,6 +130,41 @@
 .cards .card-3 .client-list .card-footer {
   width: 25%;
 }
+.cards .card-3.report {
+  display: table;
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 26px;
+  text-align: left;
+}
+.cards .card-3.report li {
+  display: table-cell;
+}
+.cards .card-3.report img {
+  background: url('../images/report.png') no-repeat;
+  height: 178px;
+  margin-right: 20px;
+  width: 390px;
+}
+.cards .card-3.report .report-text {
+  vertical-align: top;
+}
+.cards .card-3.report .report-text h3 {
+  color: #333333;
+  font-size: 1.4em;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 2px;
+  margin-top: 0;
+}
+.cards .card-3.report .report-text p > .download {
+  background: url('../images/button.png') no-repeat;
+  height: 32px;
+  margin-right: 12px;
+  width: 137px;
+  display: inline-block;
+  margin-top: 6px;
+}
 .cards .card-header {
   border-bottom: 1px solid #e0e0e0;
   padding: 13px 16px;
