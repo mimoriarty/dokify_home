@@ -1,0 +1,64 @@
+/**
+ * Application.less
+ *
+ * This file compiles to /public/assets/css/application.min.css
+ * You should use it to import all your less components
+ */
+
+// Vendor
+// @import (inline) '../vendor/vendor-package/css/vendor.css';
+// @import '../vendor/vendor-package/less/vendor.less';
+
+// Base and variables
+// @import 'base.less';
+
+// Partials
+// @import 'partials/_component.less';
+@import 'partials/_colors.less';
+@import 'partials/_mixins.less';
+@import 'partials/_header.less';
+@import 'partials/_menu.less';
+@import 'partials/_cards.less';
+@import 'partials/_bootstrap_overwrite.less';
+
+// Theme
+// @import 'theme/theme.less';
+
+
+body {
+	font-family: 'Arial', sans-serif;
+	font-size: 10px;
+}
+
+.content-padding {
+	padding: 0 25px;
+}
+
+header {
+	h1 {
+		color: @color6;
+		font-size: 1.6em;
+		font-weight: 700;
+		margin-bottom: 6px;
+	}
+}
+
+.main {
+  color: @color5;
+	font-size: 1.3em;
+}
+
+.title-container {
+	height: 80px;
+	> div {
+		height: 80px;
+	}
+	.company-logo {
+		background: url('../images/company-logo.png') no-repeat;
+		display: block;
+		height: 70px;
+		margin: 5px auto;
+		text-indent: -1000px;
+		width: 70px;
+	}
+}

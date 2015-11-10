@@ -1,0 +1,50 @@
+.client-icon {
+  .icon('../images/client-icon.png', 27px, 27px);
+}
+
+.dashboard-icon {
+  .icon('../images/dashboard-icon-selected.png', 27px, 27px);
+}
+
+.document-icon {
+  .icon('../images/document-icon.png', 27px, 27px);
+}
+
+.employe-icon {
+  .icon('../images/employe-icon.png', 27px, 27px);
+}
+
+.machine-icon {
+  .icon('../images/machine-icon.png', 27px, 27px);
+}
+
+.menu {
+  background: url('../images/separator.png') right no-repeat;
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    height: 50px;
+    width: 160px;
+    a {
+      color: @color5;
+      display: inline-block;
+      padding: 9px;
+      position: relative;
+      span {
+				display: inline-block;
+			}
+      .menu-text {
+        position: absolute;
+        top: 16px;
+      }
+    }
+    &.selected {
+      background: url('../images/selected.png') no-repeat;
+      background-position-x: -5px;
+      a {
+        color: @color1;
+        font-weight: 700;
+      }
+    }
+  }
+}

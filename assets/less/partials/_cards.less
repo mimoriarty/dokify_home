@@ -1,0 +1,29 @@
+.cards {
+  list-style-type: none;
+  height: 206px;
+  padding-left: 0;
+  text-align: center;
+  .card-1 {
+    border: 1px solid @color4;
+    display: inline-block;
+    height: 100%;
+    width: 31%;
+    &:first-child {
+      margin-right: 3.5%;
+    }
+    &:last-child {
+      margin-left: 3.5%;
+    }
+    .card-header {
+      border-bottom: 1px solid @color4;
+      padding: 13px 16px;
+      position: relative;
+      text-align: left;
+      span[class$="-icon"] {
+        position: absolute;
+        right: 0;
+        top: 8px;
+      }
+    }
+  }
+}
