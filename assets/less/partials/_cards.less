@@ -1,3 +1,21 @@
+.col-md-2 {
+	&.news {
+    height: 432px;
+		padding-right: 0;
+	}
+	&.cards {
+		overflow: hidden;
+		.card-1 {
+			width: 100%;
+			.news-container {
+				list-style-type: none;
+				padding-left: 0;
+				text-align: left;
+			}
+		}
+	}
+}
+
 .cards {
 	list-style-type: none;
 	height: 206px;
@@ -108,5 +126,16 @@
 	margin-bottom: 20px;
 	&:last-child {
 		margin-bottom: 0;
+	}
+}
+
+.new-item {
+	border-bottom: 1px solid @color4;
+	padding: 0 12px;
+	h4 {
+
+	}
+	&:last-child {
+		border-bottom: 0;
 	}
 }

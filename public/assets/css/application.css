@@ -97,6 +97,21 @@
   color: #666666;
   font-weight: 700;
 }
+.col-md-2.news {
+  height: 432px;
+  padding-right: 0;
+}
+.col-md-2.cards {
+  overflow: hidden;
+}
+.col-md-2.cards .card-1 {
+  width: 100%;
+}
+.col-md-2.cards .card-1 .news-container {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+}
 .cards {
   list-style-type: none;
   height: 206px;
@@ -212,6 +227,13 @@
 }
 .line:last-child {
   margin-bottom: 0;
+}
+.new-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 12px;
+}
+.new-item:last-child {
+  border-bottom: 0;
 }
 .navbar {
   height: 100%;
