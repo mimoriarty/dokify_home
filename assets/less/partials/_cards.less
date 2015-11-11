@@ -4,13 +4,16 @@
 		padding-right: 0;
 	}
 	&.cards {
-		overflow: hidden;
 		.card-1 {
 			width: 100%;
 			.news-container {
-				list-style-type: none;
-				padding-left: 0;
-				text-align: left;
+				height: 386px;
+				overflow: hidden;
+				ul {
+					list-style-type: none;
+					padding-left: 0;
+					text-align: left;
+				}
 			}
 		}
 	}
@@ -89,10 +92,16 @@
 		padding: 13px 16px;
 		position: relative;
 		text-align: left;
-		span[class$="-icon"] {
+		span[class$="-icon"]:not(.news-icon) {
 			position: absolute;
 			right: 0;
 			top: 8px;
+		}
+		.news-icon {
+			.icon('../images/news-icon.png', 19px, 19px);
+			position: absolute;
+			right: 0;
+			top: 14px;
 		}
 	}
 	.card-content {
@@ -133,7 +142,13 @@
 	border-bottom: 1px solid @color4;
 	padding: 0 12px;
 	h4 {
-
+		color: @color7;
+		font-size: 1.08em;
+		line-height: 1.6;
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 0.95em;
 	}
 	&:last-child {
 		border-bottom: 0;
