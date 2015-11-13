@@ -53,6 +53,7 @@
   padding: 3px 9px;
 }
 .notifications-container {
+  display: none;
   left: -321px;
   position: absolute;
   z-index: 10;
