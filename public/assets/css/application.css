@@ -53,7 +53,6 @@
   padding: 3px 9px;
 }
 .notifications-container {
-  display: none;
   left: -321px;
   position: absolute;
   z-index: 10;
@@ -110,30 +109,33 @@
 }
 .notifications-content .notifications-list {
   list-style-type: none;
-  padding: 0 50px;
+  padding-left: 0;
   text-align: left;
 }
-.notifications-content .notifications-list .notification-item {
+.notifications-content .notifications-list .notification-item .item-bg {
+  background-color: #ffffff;
+  padding: 10px 50px;
   position: relative;
 }
-.notifications-content .notifications-list .notification-item .drag-icon {
+.notifications-content .notifications-list .notification-item .item-bg .drag-icon {
   background: url('../images/drag-icon.png') no-repeat;
   height: 18px;
   margin-right: 12px;
   width: 18px;
-  left: -33px;
+  left: 17px;
   position: absolute;
-  top: 5px;
+  top: 17px;
 }
-.notifications-content .notifications-list .notification-item h4 {
+.notifications-content .notifications-list .notification-item .item-bg h4 {
   color: #666666;
   font-size: 0.995em;
   font-weight: 700;
   margin-bottom: 4px;
+  margin-top: 0;
 }
-.notifications-content .notifications-list .notification-item p {
+.notifications-content .notifications-list .notification-item .item-bg p {
   font-size: 0.925em;
-  margin-bottom: 15px;
+  margin: 0;
 }
 .notifications-content .trash-container p {
   background-color: #f2f2f2;

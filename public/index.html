@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="dokifyApp">
 <head>
 	<meta charset="utf-8">
 	<title>dokify demo</title>
@@ -8,7 +8,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/application.min.css">
+
+	<!-- angular framework for MVC -->
+	<script src="../node_modules/angular/angular.js"></script>
+
+	<!-- app script -->
 	<script src="assets/js/application.min.js"></script>
+	
+	<!-- drag & drop directives -->
+	<script src="../assets/vendor/dndLists/angular-drag-and-drop-lists.js"></script>
 </head>
 <body>
 
@@ -36,32 +44,24 @@
 
 					<button type="button" class="btn btn-primary help-input">Ayuda</button>
 
-					<div class="collapse navbar-collapse navbar-ex1-collapse pull-right top-nav">
-						<div id="notificationCounter" class="notification-alert"><span>1</span></div>
-						<div class="notifications-container">
+					<div class="collapse navbar-collapse navbar-ex1-collapse pull-right top-nav" ng-controller="notificationsListCtrl">
+						<div id="notificationCounter" class="notification-alert" ng-click="toggleVisibility()"><span>{{notifications.length}}</span></div>
+						<div class="notifications-container" ng-show="isVisible">
 							<div class="notifications-content">
 								<div class="notification-title">
 									<span class="notification-icon"></span>
 									<h3>Notificaciones</h3>
 								</div>
-								<ul class="notifications-list">
-									<li class="notification-item">
-										<span class="drag-icon"></span>
-										<h4>Has añadido un nuevo documento</h4>
-										<p>Materials with seamless deliverables. Objectively enable next-generation</p>
-									</li>
-									<li class="notification-item">
-										<span class="drag-icon"></span>
-										<h4>Tienes un nuevo mensaje</h4>
-										<p>Enable next-generation collaboration and idea-sharing for...</p>
-									</li>
-									<li class="notification-item">
-										<span class="drag-icon"></span>
-										<h4>Has añadido un nuevo documento</h4>
-										<p>Materials with seamless deliverables. Objectively enable next-generation</p>
+								<ul class="notifications-list" dnd-list="notifications">
+									<li class="notification-item" ng-repeat="notification in notifications" data-id="{{notification.id}}" dnd-draggable="notification" dnd-effect-allowed="move" dnd-moved="notifications.splice($index, 1)">
+										<div class="item-bg">
+											<span class="drag-icon"></span>
+											<h4>{{notification.title}}</h4>
+											<p>{{notification.mng}}</p>
+										</div>
 									</li>
 								</ul>
-								<div class="trash-container">
+								<div class="trash-container" dnd-list="[]">
 									<p><span class="paper-icon"></span>Arrastra aquí las notificaciones para eliminarlas</p>
 								</div>
 							</div>
